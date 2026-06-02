@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Fikri Hakim</title>
+    <style>
+        /* Desain Tema Hitam & Krem Minimalis */
+        :root {
+            --bg-color: #1a1a1a; /* Hitam Gelap */
+            --krem-color: #f5f5dc; /* Krem */
+            --krem-dark: #e8e8cc;
+            --text-color: #333;
+        }
+        
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--krem-color); 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        header { 
+            background-color: var(--krem-color); 
+            color: var(--bg-color); 
+            padding: 3rem 5%; 
+            text-align: center; 
+        }
+
+        header h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 0.5rem; 
+            margin-top: 0;
+        }
+
+        header p { 
+            font-size: 1.2rem; 
+            margin: 0;
+        }
+
+        nav { 
+            background-color: #222; 
+            display: flex; 
+            justify-content: center; 
+            padding: 1rem; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        nav a { 
+            color: var(--krem-color); 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: bold; 
+            transition: color 0.3s;
+        }
+
+        nav a:hover { 
+            color: #fff; 
+        }
+
+        .container { 
+            padding: 40px 5%; 
+            max-width: 1000px; 
+            margin: auto; 
+        }
+
+        h2 { 
+            color: var(--krem-color); 
+            border-bottom: 2px solid var(--krem-color); 
+            padding-bottom: 10px; 
+            margin-bottom: 20px; 
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .card { 
+            background-color: #2a2a2a; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-left: 4px solid var(--krem-color); 
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 { 
+            color: var(--krem-dark); 
+            margin-top: 0;
+            margin-bottom: 10px; 
+        }
+
+        .tags { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+            margin-top: 15px; 
+        }
+
+        .tag { 
+            background-color: var(--krem-color); 
+            color: var(--bg-color); 
+            padding: 5px 12px; 
+            border-radius: 15px; 
+            font-size: 0.9rem; 
+            font-weight: bold; 
+        }
+
+        footer { 
+            background-color: var(--krem-color); 
+            color: var(--bg-color); 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 40px; 
+            font-weight: bold;
+        }
+
+        a.contact-link { 
+            color: var(--krem-color); 
+            text-decoration: none; 
+        }
+
+        a.contact-link:hover { 
+            text-decoration: underline; 
+        }
+
+        .contact-info p { 
+            margin-bottom: 15px; 
+            font-size: 1.1rem;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fikri Hakim</h1>
+        <p>Portofolio Pribadi</p>
+    </header>
+
+    <nav>
+        <a href="#tentang">Tentang Saya</a>
+        <a href="#pengalaman">Pengalaman</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <div class="container">
+        <!-- TENTANG SAYA -->
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah seorang mahasiswa jurusan <strong>Sistem Informasi di Universitas Pamulang Serang</strong>, dan sebelumnya menempuh pendidikan di <strong>SMA Negeri 1 Rangkasbitung</strong>. Saya memiliki minat untuk terus belajar dan mengembangkan kemampuan, baik dalam bidang akademik maupun keterampilan lainnya. Saya dikenal sebagai pribadi yang bertanggung jawab, disiplin, dan mampu bekerja sama dengan baik dalam tim.</p>
+        </section>
+
+        <!-- PENGALAMAN -->
+        <section id="pengalaman" style="margin-top: 50px;">
+            <h2>Pengalaman & Proyek</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Membuat Pintu Otomatis (Arduino Uno)</h3>
+                    <p>Mengerjakan tugas project merancang pintu otomatis menggunakan Arduino Uno. Sistem bekerja dengan sensor, di mana pintu akan terbuka secara otomatis apabila pengguna melakukan *tap* kartu.</p>
+                </div>
+                <div class="card">
+                    <h3>Konfigurasi & Pengiriman Data LAN</h3>
+                    <p>Membuat kabel LAN secara mandiri dan melakukan konfigurasi jaringan untuk mengirimkan data antar laptop menggunakan kabel LAN tersebut.</p>
+                </div>
+                <div class="card">
+                    <h3>Wirausaha Bazzar</h3>
+                    <p>Berpartisipasi aktif dalam kegiatan wirausaha dengan menjual makanan hasil kerja kelompok di acara bazzar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEAHLIAN -->
+        <section id="keahlian" style="margin-top: 50px;">
+            <h2>Keahlian</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Kemampuan (Soft Skills)</h3>
+                    <div class="tags">
+                        <span class="tag">Komunikasi Baik</span>
+                        <span class="tag">Kerja Sama Tim</span>
+                        <span class="tag">Kerja Individu</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Perangkat Lunak (Software)</h3>
+                    <p>Dapat menjalankan program dan algoritma dasar menggunakan:</p>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">C++</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOBI & MINAT -->
+        <section id="hobi" style="margin-top: 50px;">
+            <h2>Hobi & Minat</h2>
+            <p>Saya memiliki hobi berolahraga yang membantu saya menjaga kesehatan, meningkatkan disiplin, dan membangun semangat pantang menyerah. Selain itu, saya juga memiliki minat yang besar dalam bidang teknologi, pengembangan keterampilan digital, serta berbagai inovasi yang dapat memberikan solusi bagi permasalahan sehari-hari. Saya senang mempelajari hal-hal baru dan terus berusaha mengembangkan kemampuan diri agar dapat mengikuti perkembangan zaman.</p>
+            <div class="tags">
+                <span class="tag">Olahraga</span>
+                <span class="tag">Fotografi</span>
+                <span class="tag">Travelling</span>
+                <span class="tag">Membaca</span>
+            </div>
+        </section>
+
+        <!-- KONTAK -->
+        <section id="kontak" style="margin-top: 50px;">
+            <h2>Kontak</h2>
+            <div class="contact-info">
+                <p>✉️ Email : <a class="contact-link" href="mailto:fikrihakim108@gmail.com">fikrihakim108@gmail.com</a></p>
+                <p>📸 Instagram : <a class="contact-link" href="https://instagram.com/fikrihakimd._" target="_blank">@fikrihakimd._</a></p>
+                <p>🌐 Website : <a class="contact-link" href="https://www.reallygreatsite.com" target="_blank">www.reallygreatsite.com</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fikri Hakim. Terima Kasih.</p>
+    </footer>
+
+</body>
+</html>
